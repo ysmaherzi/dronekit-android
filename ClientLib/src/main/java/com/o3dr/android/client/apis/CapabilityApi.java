@@ -1,5 +1,8 @@
 package com.o3dr.android.client.apis;
 
+import static com.o3dr.services.android.lib.drone.action.CapabilityActions.ACTION_CHECK_FEATURE_SUPPORT;
+import static com.o3dr.services.android.lib.drone.action.CapabilityActions.EXTRA_FEATURE_ID;
+
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,8 +12,6 @@ import com.o3dr.services.android.lib.model.AbstractCommandListener;
 import com.o3dr.services.android.lib.model.action.Action;
 
 import java.util.concurrent.ConcurrentHashMap;
-
-import static com.o3dr.services.android.lib.drone.action.CapabilityActions.*;
 
 /**
  * Allows to query the capabilities offered by the vehicle.

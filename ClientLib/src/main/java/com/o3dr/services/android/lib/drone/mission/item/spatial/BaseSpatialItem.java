@@ -3,8 +3,8 @@ package com.o3dr.services.android.lib.drone.mission.item.spatial;
 import android.os.Parcel;
 
 import com.o3dr.services.android.lib.coordinate.LatLongAlt;
-import com.o3dr.services.android.lib.drone.mission.item.MissionItem;
 import com.o3dr.services.android.lib.drone.mission.MissionItemType;
+import com.o3dr.services.android.lib.drone.mission.item.MissionItem;
 
 /**
  * Created by fhuya on 11/6/14.

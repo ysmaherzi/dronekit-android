@@ -1,18 +1,5 @@
 package com.o3dr.android.client.apis;
 
-import android.net.Uri;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-
-import com.o3dr.android.client.Drone;
-import com.o3dr.services.android.lib.drone.mission.Mission;
-import com.o3dr.services.android.lib.drone.mission.MissionItemType;
-import com.o3dr.services.android.lib.drone.mission.item.MissionItem;
-import com.o3dr.services.android.lib.model.AbstractCommandListener;
-import com.o3dr.services.android.lib.model.action.Action;
-
-import java.util.concurrent.ConcurrentHashMap;
-
 import static com.o3dr.services.android.lib.drone.mission.action.MissionActions.ACTION_BUILD_COMPLEX_MISSION_ITEM;
 import static com.o3dr.services.android.lib.drone.mission.action.MissionActions.ACTION_CHANGE_MISSION_SPEED;
 import static com.o3dr.services.android.lib.drone.mission.action.MissionActions.ACTION_GENERATE_DRONIE;
@@ -31,6 +18,20 @@ import static com.o3dr.services.android.lib.drone.mission.action.MissionActions.
 import static com.o3dr.services.android.lib.drone.mission.action.MissionActions.EXTRA_PUSH_TO_DRONE;
 import static com.o3dr.services.android.lib.drone.mission.action.MissionActions.EXTRA_SAVE_MISSION_URI;
 import static com.o3dr.services.android.lib.drone.mission.action.MissionActions.EXTRA_SET_LOADED_MISSION;
+
+import android.net.Uri;
+import android.os.Bundle;
+
+import androidx.annotation.Nullable;
+
+import com.o3dr.android.client.Drone;
+import com.o3dr.services.android.lib.drone.mission.Mission;
+import com.o3dr.services.android.lib.drone.mission.MissionItemType;
+import com.o3dr.services.android.lib.drone.mission.item.MissionItem;
+import com.o3dr.services.android.lib.model.AbstractCommandListener;
+import com.o3dr.services.android.lib.model.action.Action;
+
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Provides access to missions specific functionality.

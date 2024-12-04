@@ -1,17 +1,5 @@
 package com.o3dr.android.client.apis;
 
-import android.os.Bundle;
-
-import com.o3dr.android.client.Drone;
-import com.o3dr.services.android.lib.coordinate.LatLongAlt;
-import com.o3dr.services.android.lib.drone.connection.ConnectionParameter;
-import com.o3dr.services.android.lib.drone.property.Parameters;
-import com.o3dr.services.android.lib.drone.property.VehicleMode;
-import com.o3dr.services.android.lib.model.AbstractCommandListener;
-import com.o3dr.services.android.lib.model.action.Action;
-
-import java.util.concurrent.ConcurrentHashMap;
-
 import static com.o3dr.services.android.lib.drone.action.ConnectionActions.ACTION_CONNECT;
 import static com.o3dr.services.android.lib.drone.action.ConnectionActions.ACTION_DISCONNECT;
 import static com.o3dr.services.android.lib.drone.action.ConnectionActions.EXTRA_CONNECT_PARAMETER;
@@ -29,6 +17,18 @@ import static com.o3dr.services.android.lib.drone.action.StateActions.EXTRA_IS_R
 import static com.o3dr.services.android.lib.drone.action.StateActions.EXTRA_VEHICLE_DATA_STREAM_RATE;
 import static com.o3dr.services.android.lib.drone.action.StateActions.EXTRA_VEHICLE_HOME_LOCATION;
 import static com.o3dr.services.android.lib.drone.action.StateActions.EXTRA_VEHICLE_MODE;
+
+import android.os.Bundle;
+
+import com.o3dr.android.client.Drone;
+import com.o3dr.services.android.lib.coordinate.LatLongAlt;
+import com.o3dr.services.android.lib.drone.connection.ConnectionParameter;
+import com.o3dr.services.android.lib.drone.property.Parameters;
+import com.o3dr.services.android.lib.drone.property.VehicleMode;
+import com.o3dr.services.android.lib.model.AbstractCommandListener;
+import com.o3dr.services.android.lib.model.action.Action;
+
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Provides access to the vehicle specific functionality.

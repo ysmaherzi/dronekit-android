@@ -1,5 +1,13 @@
 package com.o3dr.android.client.apis;
 
+import static com.o3dr.services.android.lib.gcs.action.FollowMeActions.ACTION_DISABLE_FOLLOW_ME;
+import static com.o3dr.services.android.lib.gcs.action.FollowMeActions.ACTION_ENABLE_FOLLOW_ME;
+import static com.o3dr.services.android.lib.gcs.action.FollowMeActions.ACTION_NEW_EXTERNAL_LOCATION;
+import static com.o3dr.services.android.lib.gcs.action.FollowMeActions.ACTION_UPDATE_FOLLOW_PARAMS;
+import static com.o3dr.services.android.lib.gcs.action.FollowMeActions.EXTRA_FOLLOW_TYPE;
+import static com.o3dr.services.android.lib.gcs.action.FollowMeActions.EXTRA_LOCATION;
+import static com.o3dr.services.android.lib.gcs.action.FollowMeActions.EXTRA_LOCATION_SOURCE;
+
 import android.os.Bundle;
 
 import com.o3dr.android.client.Drone;
@@ -8,14 +16,6 @@ import com.o3dr.services.android.lib.gcs.follow.FollowType;
 import com.o3dr.services.android.lib.model.action.Action;
 
 import java.util.concurrent.ConcurrentHashMap;
-
-import static com.o3dr.services.android.lib.gcs.action.FollowMeActions.ACTION_DISABLE_FOLLOW_ME;
-import static com.o3dr.services.android.lib.gcs.action.FollowMeActions.ACTION_ENABLE_FOLLOW_ME;
-import static com.o3dr.services.android.lib.gcs.action.FollowMeActions.ACTION_NEW_EXTERNAL_LOCATION;
-import static com.o3dr.services.android.lib.gcs.action.FollowMeActions.ACTION_UPDATE_FOLLOW_PARAMS;
-import static com.o3dr.services.android.lib.gcs.action.FollowMeActions.EXTRA_FOLLOW_TYPE;
-import static com.o3dr.services.android.lib.gcs.action.FollowMeActions.EXTRA_LOCATION;
-import static com.o3dr.services.android.lib.gcs.action.FollowMeActions.EXTRA_LOCATION_SOURCE;
 
 /**
  * Provides access to the Follow me api.

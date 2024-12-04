@@ -1,12 +1,5 @@
 package org.droidplanner.services.android.impl.utils;
 
-import com.o3dr.services.android.lib.drone.attribute.error.ErrorType;
-
-import org.droidplanner.services.android.impl.core.drone.autopilot.MavLinkDrone;
-import org.droidplanner.services.android.impl.core.model.AutopilotWarningParser;
-
-import java.util.Locale;
-
 import static com.o3dr.services.android.lib.drone.attribute.error.ErrorType.ALTITUDE_DISPARITY;
 import static com.o3dr.services.android.lib.drone.attribute.error.ErrorType.ARM_COMPASS_CALIBRATION_RUNNING;
 import static com.o3dr.services.android.lib.drone.attribute.error.ErrorType.ARM_GYRO_CALIBRATION_FAILED;
@@ -47,6 +40,13 @@ import static com.o3dr.services.android.lib.drone.attribute.error.ErrorType.PRE_
 import static com.o3dr.services.android.lib.drone.attribute.error.ErrorType.PRE_ARM_RC_NOT_CALIBRATED;
 import static com.o3dr.services.android.lib.drone.attribute.error.ErrorType.RC_FAILSAFE;
 import static com.o3dr.services.android.lib.drone.attribute.error.ErrorType.WAITING_FOR_NAVIGATION_ALIGNMENT;
+
+import com.o3dr.services.android.lib.drone.attribute.error.ErrorType;
+
+import org.droidplanner.services.android.impl.core.drone.autopilot.MavLinkDrone;
+import org.droidplanner.services.android.impl.core.model.AutopilotWarningParser;
+
+import java.util.Locale;
 
 /**
  * Autopilot error parser.

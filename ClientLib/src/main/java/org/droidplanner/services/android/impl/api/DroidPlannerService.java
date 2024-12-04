@@ -2,17 +2,24 @@ package org.droidplanner.services.android.impl.api;
 
 import android.annotation.SuppressLint;
 import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.Service;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.pm.ServiceInfo;
+import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.content.LocalBroadcastManager;
 import android.text.TextUtils;
+
+import androidx.annotation.RequiresApi;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.ServiceCompat;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.o3dr.android.client.R;
 import com.o3dr.services.android.lib.drone.connection.ConnectionParameter;
@@ -40,6 +47,7 @@ public class DroidPlannerService extends Service {
      * Status bar notification id
      */
     private static final int FOREGROUND_ID = 101;
+    private static final String notificationChannelId = "Service";
 
     /**
      * Set of actions to notify the local app's components of the service events.
@@ -215,23 +223,32 @@ public class DroidPlannerService extends Service {
         updateForegroundNotification();
     }
 
-    @SuppressLint("NewApi")
+    @RequiresApi(api = Build.VERSION_CODES.O)
     private void updateForegroundNotification() {
-        final Context context = getApplicationContext();
-
-        //Put the service in the foreground
-        final NotificationCompat.Builder notifBuilder = new NotificationCompat.Builder(context)
-                .setContentTitle("DroneKit-Android")
-                .setPriority(NotificationCompat.PRIORITY_MIN)
-                .setSmallIcon(R.drawable.ic_stat_notify);
-
-        final int connectedCount = droneApiStore.size();
-        if (connectedCount > 1) {
-            notifBuilder.setContentText(connectedCount + " connected apps");
+        // Create the NotificationChannel.
+        final NotificationChannel mChannel = new NotificationChannel(notificationChannelId, notificationChannelId, NotificationManager.IMPORTANCE_HIGH);
+        // Register the channel with the system. You can't change the importance
+        // or other notification behaviors after this.
+        final NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            notificationManager.createNotificationChannel(mChannel);
         }
 
-        final Notification notification = notifBuilder.build();
-        startForeground(FOREGROUND_ID, notification);
+        try {
+            final Notification notification = new NotificationCompat.Builder(this, notificationChannelId)
+                    .setContentTitle("Service en cours d'execution")
+                    .setForegroundServiceBehavior(NotificationCompat.FOREGROUND_SERVICE_IMMEDIATE)
+                    .build();
+            ServiceCompat.startForeground(
+                    /* service = */ this,
+                    /* id = */ 100, // Cannot be 0
+                    /* notification = */ notification,
+                    /* foregroundServiceType = */
+                    ServiceInfo.FOREGROUND_SERVICE_TYPE_CAMERA | ServiceInfo.FOREGROUND_SERVICE_TYPE_LOCATION
+            );
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 
     @Override

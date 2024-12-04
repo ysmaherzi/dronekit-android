@@ -1,21 +1,38 @@
-apply plugin: 'java'
-sourceCompatibility = JavaVersion.VERSION_1_7
-targetCompatibility = JavaVersion.VERSION_1_7
-
-sourceSets {
-    main {
-        java.srcDirs = ['src']
-    }
-
-    test {
-        java.srcDirs = ['test']
-    }
+plugins {
+    alias(libs.plugins.android.library)
 }
 
-jar {
-    destinationDir (new File("${rootDir}/ClientLib/libs"))
+android {
+    namespace 'com.MAVLink'
+    compileSdk 35
+
+    defaultConfig {
+        minSdk 24
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    sourceSets {
+        main.java.srcDirs = ['src']
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
 }
 
 dependencies {
-    testCompile 'junit:junit:4.12'
+    implementation libs.appcompat
+    implementation libs.material
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
 }

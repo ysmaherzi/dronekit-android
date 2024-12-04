@@ -1,5 +1,8 @@
 package com.o3dr.android.client.apis.solo;
 
+import static com.o3dr.services.android.lib.drone.companion.solo.action.SoloActions.ACTION_SEND_MESSAGE;
+import static com.o3dr.services.android.lib.drone.companion.solo.action.SoloActions.EXTRA_MESSAGE_DATA;
+
 import android.os.Bundle;
 
 import com.o3dr.android.client.Drone;
@@ -7,9 +10,6 @@ import com.o3dr.android.client.apis.Api;
 import com.o3dr.services.android.lib.drone.companion.solo.tlv.TLVPacket;
 import com.o3dr.services.android.lib.model.AbstractCommandListener;
 import com.o3dr.services.android.lib.model.action.Action;
-
-import static com.o3dr.services.android.lib.drone.companion.solo.action.SoloActions.ACTION_SEND_MESSAGE;
-import static com.o3dr.services.android.lib.drone.companion.solo.action.SoloActions.EXTRA_MESSAGE_DATA;
 
 /**
  * Created by Fredia Huya-Kouadio on 7/31/15.

@@ -38,6 +38,7 @@
 
         <activity
             android:name="org.droidplanner.services.android.impl.ui.activity.UsbIntentReceiver"
+            android:exported="true"
             android:launchMode="singleInstance"
             android:noHistory="true"
             android:excludeFromRecents="true">
@@ -53,7 +54,8 @@
 
         <service
             android:name="org.droidplanner.services.android.impl.api.DroidPlannerService"
-            android:enabled="false">
+            android:enabled="false"
+            android:exported="true">
 
             <!-- Filter and meta data for the Tower lib runtime -->
             <intent-filter>

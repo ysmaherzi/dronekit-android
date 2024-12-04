@@ -1,16 +1,5 @@
 package com.o3dr.android.client.apis;
 
-import android.os.Bundle;
-
-import com.o3dr.android.client.Drone;
-import com.o3dr.services.android.lib.coordinate.LatLong;
-import com.o3dr.services.android.lib.coordinate.LatLongAlt;
-import com.o3dr.services.android.lib.drone.attribute.error.CommandExecutionError;
-import com.o3dr.services.android.lib.model.AbstractCommandListener;
-import com.o3dr.services.android.lib.model.action.Action;
-
-import java.util.concurrent.ConcurrentHashMap;
-
 import static com.o3dr.services.android.lib.drone.action.ControlActions.ACTION_DO_GUIDED_TAKEOFF;
 import static com.o3dr.services.android.lib.drone.action.ControlActions.ACTION_ENABLE_MANUAL_CONTROL;
 import static com.o3dr.services.android.lib.drone.action.ControlActions.ACTION_LOOK_AT_TARGET;
@@ -30,6 +19,17 @@ import static com.o3dr.services.android.lib.drone.action.ControlActions.EXTRA_VE
 import static com.o3dr.services.android.lib.drone.action.ControlActions.EXTRA_YAW_CHANGE_RATE;
 import static com.o3dr.services.android.lib.drone.action.ControlActions.EXTRA_YAW_IS_RELATIVE;
 import static com.o3dr.services.android.lib.drone.action.ControlActions.EXTRA_YAW_TARGET_ANGLE;
+
+import android.os.Bundle;
+
+import com.o3dr.android.client.Drone;
+import com.o3dr.services.android.lib.coordinate.LatLong;
+import com.o3dr.services.android.lib.coordinate.LatLongAlt;
+import com.o3dr.services.android.lib.drone.attribute.error.CommandExecutionError;
+import com.o3dr.services.android.lib.model.AbstractCommandListener;
+import com.o3dr.services.android.lib.model.action.Action;
+
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Provides access to the vehicle control functionality.

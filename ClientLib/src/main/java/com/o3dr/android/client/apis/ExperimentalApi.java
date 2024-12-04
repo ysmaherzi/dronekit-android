@@ -1,5 +1,18 @@
 package com.o3dr.android.client.apis;
 
+import static com.o3dr.services.android.lib.drone.action.CameraActions.EXTRA_VIDEO_TAG;
+import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.ACTION_SEND_MAVLINK_MESSAGE;
+import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.ACTION_SET_RELAY;
+import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.ACTION_SET_ROI;
+import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.ACTION_SET_SERVO;
+import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.ACTION_TRIGGER_CAMERA;
+import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.EXTRA_IS_RELAY_ON;
+import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.EXTRA_MAVLINK_MESSAGE;
+import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.EXTRA_RELAY_NUMBER;
+import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.EXTRA_SERVO_CHANNEL;
+import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.EXTRA_SERVO_PWM;
+import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.EXTRA_SET_ROI_LAT_LONG_ALT;
+
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
@@ -17,19 +30,6 @@ import com.o3dr.services.android.lib.model.action.Action;
 
 import java.nio.ByteBuffer;
 import java.util.concurrent.ConcurrentHashMap;
-
-import static com.o3dr.services.android.lib.drone.action.CameraActions.EXTRA_VIDEO_TAG;
-import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.ACTION_SEND_MAVLINK_MESSAGE;
-import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.ACTION_SET_RELAY;
-import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.ACTION_SET_ROI;
-import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.ACTION_SET_SERVO;
-import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.ACTION_TRIGGER_CAMERA;
-import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.EXTRA_IS_RELAY_ON;
-import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.EXTRA_MAVLINK_MESSAGE;
-import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.EXTRA_RELAY_NUMBER;
-import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.EXTRA_SERVO_CHANNEL;
-import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.EXTRA_SERVO_PWM;
-import static com.o3dr.services.android.lib.drone.action.ExperimentalActions.EXTRA_SET_ROI_LAT_LONG_ALT;
 
 /**
  * Contains drone commands with no defined interaction model yet.

@@ -6,9 +6,9 @@
 
 package com.MAVLink.enums;
 
-/** 
-* These encode the sensors whose status is sent as part of the SYS_STATUS message.
-*/
+/**
+ * These encode the sensors whose status is sent as part of the SYS_STATUS message.
+ */
 public class MAV_SYS_STATUS_SENSOR {
    public static final int MAV_SYS_STATUS_SENSOR_3D_GYRO = 1; /* 0x01 3D gyro | */
    public static final int MAV_SYS_STATUS_SENSOR_3D_ACCEL = 2; /* 0x02 3D accelerometer | */
@@ -26,7 +26,7 @@ public class MAV_SYS_STATUS_SENSOR {
    public static final int MAV_SYS_STATUS_SENSOR_Z_ALTITUDE_CONTROL = 8192; /* 0x2000 z/altitude control | */
    public static final int MAV_SYS_STATUS_SENSOR_XY_POSITION_CONTROL = 16384; /* 0x4000 x/y position control | */
    public static final int MAV_SYS_STATUS_SENSOR_MOTOR_OUTPUTS = 32768; /* 0x8000 motor outputs / control | */
-   public static final int MAV_SYS_STATUS_SENSOR_RC_RECEIVER = 65536; /* 0x10000 rc receiver | */
+   public static final int MAV_SYS_STATUS_SENSOR_RC_RECEIVER = 65536; /* 0x10000 RC receiver | */
    public static final int MAV_SYS_STATUS_SENSOR_3D_GYRO2 = 131072; /* 0x20000 2nd 3D gyro | */
    public static final int MAV_SYS_STATUS_SENSOR_3D_ACCEL2 = 262144; /* 0x40000 2nd 3D accelerometer | */
    public static final int MAV_SYS_STATUS_SENSOR_3D_MAG2 = 524288; /* 0x80000 2nd 3D magnetometer | */
@@ -36,6 +36,11 @@ public class MAV_SYS_STATUS_SENSOR {
    public static final int MAV_SYS_STATUS_REVERSE_MOTOR = 8388608; /* 0x800000 Motors are reversed | */
    public static final int MAV_SYS_STATUS_LOGGING = 16777216; /* 0x1000000 Logging | */
    public static final int MAV_SYS_STATUS_SENSOR_BATTERY = 33554432; /* 0x2000000 Battery | */
-   public static final int MAV_SYS_STATUS_SENSOR_ENUM_END = 33554433; /*  | */
+   public static final int MAV_SYS_STATUS_SENSOR_PROXIMITY = 67108864; /* 0x4000000 Proximity | */
+   public static final int MAV_SYS_STATUS_SENSOR_SATCOM = 134217728; /* 0x8000000 Satellite Communication  | */
+   public static final int MAV_SYS_STATUS_PREARM_CHECK = 268435456; /* 0x10000000 pre-arm check status. Always healthy when armed | */
+   public static final int MAV_SYS_STATUS_OBSTACLE_AVOIDANCE = 536870912; /* 0x20000000 Avoidance/collision prevention | */
+   public static final int MAV_SYS_STATUS_SENSOR_PROPULSION = 1073741824; /* 0x40000000 propulsion (actuator, esc, motor or propellor) | */
+   public static final long MAV_SYS_STATUS_EXTENSION_USED = 2147483648L; /* 0x80000000 Extended bit-field are used for further sensor status bits (needs to be set in onboard_control_sensors_present only) | */
+   public static final long MAV_SYS_STATUS_SENSOR_ENUM_END = 2147483649L; /*  | */
 }
-            

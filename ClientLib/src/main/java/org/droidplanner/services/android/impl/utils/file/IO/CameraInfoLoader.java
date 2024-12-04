@@ -2,8 +2,9 @@ package org.droidplanner.services.android.impl.utils.file.IO;
 
 import android.content.Context;
 
-import org.droidplanner.services.android.impl.core.survey.CameraInfo;
 import com.o3dr.android.client.utils.FileUtils;
+
+import org.droidplanner.services.android.impl.core.survey.CameraInfo;
 
 import java.io.File;
 import java.io.FileInputStream;

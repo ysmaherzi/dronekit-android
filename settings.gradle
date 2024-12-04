@@ -1,11 +1,27 @@
-//Library projects
-include ':Mavlink'
+pluginManagement {
+    repositories {
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url 'https://jitpack.io' }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
 
-//Android library projects
+rootProject.name = "DroneKit"
+include ':dependencyLibs:Mavlink'
 include ':ClientLib'
-
-//Android projects
-include ':StarterApp'
-
-project(':Mavlink').projectDir = new File('dependencyLibs/Mavlink')
-project(':StarterApp').projectDir = new File('samples/StarterApp')
+include ':samples:StarterApp'

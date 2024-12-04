@@ -6,9 +6,9 @@
 
 package com.MAVLink.enums;
 
-/** 
-* Specifies the datatype of a MAVLink parameter.
-*/
+/**
+ * Specifies the datatype of a MAVLink parameter.
+ */
 public class MAV_PARAM_TYPE {
    public static final int MAV_PARAM_TYPE_UINT8 = 1; /* 8-bit unsigned integer | */
    public static final int MAV_PARAM_TYPE_INT8 = 2; /* 8-bit signed integer | */
@@ -22,4 +22,3 @@ public class MAV_PARAM_TYPE {
    public static final int MAV_PARAM_TYPE_REAL64 = 10; /* 64-bit floating-point | */
    public static final int MAV_PARAM_TYPE_ENUM_END = 11; /*  | */
 }
-            

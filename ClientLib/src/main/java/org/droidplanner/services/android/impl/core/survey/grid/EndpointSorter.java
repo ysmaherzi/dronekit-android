@@ -1,9 +1,10 @@
 package org.droidplanner.services.android.impl.core.survey.grid;
 
+import com.o3dr.services.android.lib.coordinate.LatLong;
+
 import org.droidplanner.services.android.impl.core.helpers.geoTools.LineLatLong;
 import org.droidplanner.services.android.impl.core.helpers.geoTools.LineSampler;
 import org.droidplanner.services.android.impl.core.helpers.geoTools.LineTools;
-import com.o3dr.services.android.lib.coordinate.LatLong;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +24,7 @@ public class EndpointSorter {
 
 	public void sortGrid(LatLong lastpnt, boolean sort) throws Exception {
 		while (grid.size() > 0) {
-			if (sort) {				
+			if (sort) {
 				LineLatLong closestLine = LineTools.findClosestLineToPoint(lastpnt, grid);
 				LatLong secondWp = processOneGridLine(closestLine, lastpnt, sort);
 				lastpnt = secondWp;
@@ -46,7 +47,7 @@ public class EndpointSorter {
 		updateCameraLocations(firstWP, secondWp);
 		gridPoints.add(firstWP);
 		gridPoints.add(secondWp);
-		
+
 		if (cameraLocations.size() > MAX_NUMBER_OF_CAMERAS) {
 			throw new Exception("Too many camera positions");
 		}

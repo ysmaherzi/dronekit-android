@@ -1,13 +1,5 @@
 package org.droidplanner.services.android.impl.core.helpers.geoTools;
 
-import org.droidplanner.services.android.impl.core.helpers.units.Area;
-import org.droidplanner.services.android.impl.core.polygon.Polygon;
-import com.o3dr.services.android.lib.coordinate.LatLong;
-import com.o3dr.services.android.lib.coordinate.LatLongAlt;
-import com.o3dr.services.android.lib.util.MathUtils;
-
-import java.util.List;
-
 import static java.lang.Math.PI;
 import static java.lang.Math.abs;
 import static java.lang.Math.atan2;
@@ -15,6 +7,15 @@ import static java.lang.Math.cos;
 import static java.lang.Math.sin;
 import static java.lang.Math.tan;
 import static java.lang.Math.toRadians;
+
+import com.o3dr.services.android.lib.coordinate.LatLong;
+import com.o3dr.services.android.lib.coordinate.LatLongAlt;
+import com.o3dr.services.android.lib.util.MathUtils;
+
+import org.droidplanner.services.android.impl.core.helpers.units.Area;
+import org.droidplanner.services.android.impl.core.polygon.Polygon;
+
+import java.util.List;
 
 public class GeoTools {
     private static final double RADIUS_OF_EARTH = 6378137.0;// In meters.

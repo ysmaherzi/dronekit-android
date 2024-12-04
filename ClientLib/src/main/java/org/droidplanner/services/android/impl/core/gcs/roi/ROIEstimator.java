@@ -2,13 +2,14 @@ package org.droidplanner.services.android.impl.core.gcs.roi;
 
 import android.os.Handler;
 
+import com.o3dr.services.android.lib.coordinate.LatLong;
+import com.o3dr.services.android.lib.coordinate.LatLongAlt;
+
 import org.droidplanner.services.android.impl.core.MAVLink.command.doCmd.MavLinkDoCmds;
 import org.droidplanner.services.android.impl.core.drone.autopilot.MavLinkDrone;
 import org.droidplanner.services.android.impl.core.gcs.location.Location;
 import org.droidplanner.services.android.impl.core.gcs.location.Location.LocationReceiver;
 import org.droidplanner.services.android.impl.core.helpers.geoTools.GeoTools;
-import com.o3dr.services.android.lib.coordinate.LatLong;
-import com.o3dr.services.android.lib.coordinate.LatLongAlt;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 

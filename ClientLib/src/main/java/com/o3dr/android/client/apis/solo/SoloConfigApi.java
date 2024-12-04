@@ -1,18 +1,5 @@
 package com.o3dr.android.client.apis.solo;
 
-import android.os.Bundle;
-
-import com.o3dr.android.client.Drone;
-import com.o3dr.android.client.utils.TxPowerComplianceCountries;
-import com.o3dr.services.android.lib.drone.attribute.error.CommandExecutionError;
-import com.o3dr.services.android.lib.drone.companion.solo.controller.SoloControllerMode;
-import com.o3dr.services.android.lib.drone.companion.solo.controller.SoloControllerUnits;
-import com.o3dr.services.android.lib.drone.companion.solo.tlv.SoloButtonSettingSetter;
-import com.o3dr.services.android.lib.model.AbstractCommandListener;
-import com.o3dr.services.android.lib.model.action.Action;
-
-import java.util.concurrent.ConcurrentHashMap;
-
 import static com.o3dr.services.android.lib.drone.companion.solo.action.SoloConfigActions.ACTION_REFRESH_SOLO_VERSIONS;
 import static com.o3dr.services.android.lib.drone.companion.solo.action.SoloConfigActions.ACTION_UPDATE_BUTTON_SETTINGS;
 import static com.o3dr.services.android.lib.drone.companion.solo.action.SoloConfigActions.ACTION_UPDATE_CONTROLLER_MODE;
@@ -25,6 +12,19 @@ import static com.o3dr.services.android.lib.drone.companion.solo.action.SoloConf
 import static com.o3dr.services.android.lib.drone.companion.solo.action.SoloConfigActions.EXTRA_TX_POWER_COMPLIANT_COUNTRY_CODE;
 import static com.o3dr.services.android.lib.drone.companion.solo.action.SoloConfigActions.EXTRA_WIFI_PASSWORD;
 import static com.o3dr.services.android.lib.drone.companion.solo.action.SoloConfigActions.EXTRA_WIFI_SSID;
+
+import android.os.Bundle;
+
+import com.o3dr.android.client.Drone;
+import com.o3dr.android.client.utils.TxPowerComplianceCountries;
+import com.o3dr.services.android.lib.drone.attribute.error.CommandExecutionError;
+import com.o3dr.services.android.lib.drone.companion.solo.controller.SoloControllerMode;
+import com.o3dr.services.android.lib.drone.companion.solo.controller.SoloControllerUnits;
+import com.o3dr.services.android.lib.drone.companion.solo.tlv.SoloButtonSettingSetter;
+import com.o3dr.services.android.lib.model.AbstractCommandListener;
+import com.o3dr.services.android.lib.model.action.Action;
+
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Created by Fredia Huya-Kouadio on 7/31/15.

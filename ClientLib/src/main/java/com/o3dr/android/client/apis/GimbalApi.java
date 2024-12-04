@@ -1,7 +1,14 @@
 package com.o3dr.android.client.apis;
 
+import static com.o3dr.services.android.lib.drone.action.GimbalActions.ACTION_SET_GIMBAL_MOUNT_MODE;
+import static com.o3dr.services.android.lib.drone.action.GimbalActions.ACTION_SET_GIMBAL_ORIENTATION;
+import static com.o3dr.services.android.lib.drone.action.GimbalActions.GIMBAL_MOUNT_MODE;
+import static com.o3dr.services.android.lib.drone.action.GimbalActions.GIMBAL_PITCH;
+import static com.o3dr.services.android.lib.drone.action.GimbalActions.GIMBAL_ROLL;
+import static com.o3dr.services.android.lib.drone.action.GimbalActions.GIMBAL_YAW;
+
 import android.os.Bundle;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.MAVLink.enums.MAV_MOUNT_MODE;
 import com.o3dr.android.client.Drone;
@@ -16,13 +23,6 @@ import com.o3dr.services.android.lib.model.action.Action;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
-
-import static com.o3dr.services.android.lib.drone.action.GimbalActions.ACTION_SET_GIMBAL_MOUNT_MODE;
-import static com.o3dr.services.android.lib.drone.action.GimbalActions.ACTION_SET_GIMBAL_ORIENTATION;
-import static com.o3dr.services.android.lib.drone.action.GimbalActions.GIMBAL_MOUNT_MODE;
-import static com.o3dr.services.android.lib.drone.action.GimbalActions.GIMBAL_PITCH;
-import static com.o3dr.services.android.lib.drone.action.GimbalActions.GIMBAL_ROLL;
-import static com.o3dr.services.android.lib.drone.action.GimbalActions.GIMBAL_YAW;
 
 public final class GimbalApi extends Api implements DroneListener {
 

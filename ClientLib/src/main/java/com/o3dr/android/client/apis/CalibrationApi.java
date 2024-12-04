@@ -1,13 +1,5 @@
 package com.o3dr.android.client.apis;
 
-import android.os.Bundle;
-
-import com.o3dr.android.client.Drone;
-import com.o3dr.services.android.lib.model.AbstractCommandListener;
-import com.o3dr.services.android.lib.model.action.Action;
-
-import java.util.concurrent.ConcurrentHashMap;
-
 import static com.o3dr.services.android.lib.gcs.action.CalibrationActions.ACTION_ACCEPT_MAGNETOMETER_CALIBRATION;
 import static com.o3dr.services.android.lib.gcs.action.CalibrationActions.ACTION_CANCEL_MAGNETOMETER_CALIBRATION;
 import static com.o3dr.services.android.lib.gcs.action.CalibrationActions.ACTION_SEND_IMU_CALIBRATION_ACK;
@@ -17,6 +9,14 @@ import static com.o3dr.services.android.lib.gcs.action.CalibrationActions.EXTRA_
 import static com.o3dr.services.android.lib.gcs.action.CalibrationActions.EXTRA_RETRY_ON_FAILURE;
 import static com.o3dr.services.android.lib.gcs.action.CalibrationActions.EXTRA_SAVE_AUTOMATICALLY;
 import static com.o3dr.services.android.lib.gcs.action.CalibrationActions.EXTRA_START_DELAY;
+
+import android.os.Bundle;
+
+import com.o3dr.android.client.Drone;
+import com.o3dr.services.android.lib.model.AbstractCommandListener;
+import com.o3dr.services.android.lib.model.action.Action;
+
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Provides access to the calibration specific functionality.

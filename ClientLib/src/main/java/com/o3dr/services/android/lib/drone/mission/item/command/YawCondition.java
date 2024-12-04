@@ -2,8 +2,8 @@ package com.o3dr.services.android.lib.drone.mission.item.command;
 
 import android.os.Parcel;
 
-import com.o3dr.services.android.lib.drone.mission.item.MissionItem;
 import com.o3dr.services.android.lib.drone.mission.MissionItemType;
+import com.o3dr.services.android.lib.drone.mission.item.MissionItem;
 
 /**
  * Created by fhuya on 11/10/14.

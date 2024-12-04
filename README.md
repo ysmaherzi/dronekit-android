@@ -1,3 +1,6 @@
+Install mavlink : https://mavlink.io/en/getting_started/installation.html
+Generate java code : python3 -m pymavlink.tools.mavgen --lang=Java --wire-protocol=1.0 --output=../dronekit-android/dependencyLibs/Mavlink/src/main/java/com/MAVLink message_definitions/v1.0/all.xml
+
 # DroneKit-Android
 
 ![dronekit_python_logo](https://cloud.githubusercontent.com/assets/5368500/10805537/90dd4b14-7e22-11e5-9592-5925348a7df9.png)

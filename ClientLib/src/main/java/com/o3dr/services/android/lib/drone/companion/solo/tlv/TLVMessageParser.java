@@ -1,28 +1,5 @@
 package com.o3dr.services.android.lib.drone.companion.solo.tlv;
 
-import android.util.Log;
-
-import com.o3dr.services.android.lib.drone.companion.solo.tlv.sitescan.inspect.SoloInspectStart;
-import com.o3dr.services.android.lib.drone.companion.solo.tlv.sitescan.inspect.SoloInspectSetWaypoint;
-import com.o3dr.services.android.lib.drone.companion.solo.tlv.sitescan.inspect.SoloInspectMoveGimbal;
-import com.o3dr.services.android.lib.drone.companion.solo.tlv.sitescan.inspect.SoloInspectMoveVehicle;
-import com.o3dr.services.android.lib.drone.companion.solo.tlv.mpcc.SoloSplineAttach;
-import com.o3dr.services.android.lib.drone.companion.solo.tlv.mpcc.SoloSplineDurations;
-import com.o3dr.services.android.lib.drone.companion.solo.tlv.mpcc.SoloSplinePathSettings;
-import com.o3dr.services.android.lib.drone.companion.solo.tlv.mpcc.SoloSplinePlay;
-import com.o3dr.services.android.lib.drone.companion.solo.tlv.mpcc.SoloSplinePlaybackStatus;
-import com.o3dr.services.android.lib.drone.companion.solo.tlv.mpcc.SoloSplinePoint;
-import com.o3dr.services.android.lib.drone.companion.solo.tlv.mpcc.SoloSplineRecord;
-import com.o3dr.services.android.lib.drone.companion.solo.tlv.mpcc.SoloSplineSeek;
-import com.o3dr.services.android.lib.drone.companion.solo.tlv.sitescan.scan.SoloScanStart;
-import com.o3dr.services.android.lib.drone.companion.solo.tlv.sitescan.survey.SoloSurveyStart;
-
-import java.nio.BufferUnderflowException;
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.util.ArrayList;
-import java.util.List;
-
 import static com.o3dr.services.android.lib.drone.companion.solo.tlv.TLVMessageTypes.TYPE_ARTOO_INPUT_REPORT_MESSAGE;
 import static com.o3dr.services.android.lib.drone.companion.solo.tlv.TLVMessageTypes.TYPE_RTL_HOME_POINT;
 import static com.o3dr.services.android.lib.drone.companion.solo.tlv.TLVMessageTypes.TYPE_SOLO_CABLE_CAM_OPTIONS;
@@ -54,8 +31,8 @@ import static com.o3dr.services.android.lib.drone.companion.solo.tlv.TLVMessageT
 import static com.o3dr.services.android.lib.drone.companion.solo.tlv.TLVMessageTypes.TYPE_SOLO_SHOT_ERROR;
 import static com.o3dr.services.android.lib.drone.companion.solo.tlv.TLVMessageTypes.TYPE_SOLO_SHOT_OPTIONS;
 import static com.o3dr.services.android.lib.drone.companion.solo.tlv.TLVMessageTypes.TYPE_SOLO_SPLINE_ATTACH;
-import static com.o3dr.services.android.lib.drone.companion.solo.tlv.TLVMessageTypes.TYPE_SOLO_SPLINE_PATH_SETTINGS;
 import static com.o3dr.services.android.lib.drone.companion.solo.tlv.TLVMessageTypes.TYPE_SOLO_SPLINE_DURATIONS;
+import static com.o3dr.services.android.lib.drone.companion.solo.tlv.TLVMessageTypes.TYPE_SOLO_SPLINE_PATH_SETTINGS;
 import static com.o3dr.services.android.lib.drone.companion.solo.tlv.TLVMessageTypes.TYPE_SOLO_SPLINE_PLAY;
 import static com.o3dr.services.android.lib.drone.companion.solo.tlv.TLVMessageTypes.TYPE_SOLO_SPLINE_PLAYBACK_STATUS;
 import static com.o3dr.services.android.lib.drone.companion.solo.tlv.TLVMessageTypes.TYPE_SOLO_SPLINE_POINT;
@@ -64,6 +41,29 @@ import static com.o3dr.services.android.lib.drone.companion.solo.tlv.TLVMessageT
 import static com.o3dr.services.android.lib.drone.companion.solo.tlv.TLVMessageTypes.TYPE_SOLO_SURVEY_START;
 import static com.o3dr.services.android.lib.drone.companion.solo.tlv.TLVMessageTypes.TYPE_SOLO_ZIPLINE_LOCK;
 import static com.o3dr.services.android.lib.drone.companion.solo.tlv.TLVMessageTypes.TYPE_SOLO_ZIPLINE_OPTIONS;
+
+import android.util.Log;
+
+import com.o3dr.services.android.lib.drone.companion.solo.tlv.mpcc.SoloSplineAttach;
+import com.o3dr.services.android.lib.drone.companion.solo.tlv.mpcc.SoloSplineDurations;
+import com.o3dr.services.android.lib.drone.companion.solo.tlv.mpcc.SoloSplinePathSettings;
+import com.o3dr.services.android.lib.drone.companion.solo.tlv.mpcc.SoloSplinePlay;
+import com.o3dr.services.android.lib.drone.companion.solo.tlv.mpcc.SoloSplinePlaybackStatus;
+import com.o3dr.services.android.lib.drone.companion.solo.tlv.mpcc.SoloSplinePoint;
+import com.o3dr.services.android.lib.drone.companion.solo.tlv.mpcc.SoloSplineRecord;
+import com.o3dr.services.android.lib.drone.companion.solo.tlv.mpcc.SoloSplineSeek;
+import com.o3dr.services.android.lib.drone.companion.solo.tlv.sitescan.inspect.SoloInspectMoveGimbal;
+import com.o3dr.services.android.lib.drone.companion.solo.tlv.sitescan.inspect.SoloInspectMoveVehicle;
+import com.o3dr.services.android.lib.drone.companion.solo.tlv.sitescan.inspect.SoloInspectSetWaypoint;
+import com.o3dr.services.android.lib.drone.companion.solo.tlv.sitescan.inspect.SoloInspectStart;
+import com.o3dr.services.android.lib.drone.companion.solo.tlv.sitescan.scan.SoloScanStart;
+import com.o3dr.services.android.lib.drone.companion.solo.tlv.sitescan.survey.SoloSurveyStart;
+
+import java.nio.BufferUnderflowException;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Utility class to generate tlv packet from received bytes.

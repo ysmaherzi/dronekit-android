@@ -2,12 +2,13 @@ package org.droidplanner.services.android.impl.core.gcs.follow;
 
 import android.os.Handler;
 
-import org.droidplanner.services.android.impl.core.drone.manager.MavLinkDroneManager;
-import org.droidplanner.services.android.impl.core.gcs.location.Location;
-import org.droidplanner.services.android.impl.core.helpers.geoTools.GeoTools;
 import com.o3dr.services.android.lib.coordinate.LatLong;
 import com.o3dr.services.android.lib.drone.attribute.AttributeType;
 import com.o3dr.services.android.lib.drone.property.Gps;
+
+import org.droidplanner.services.android.impl.core.drone.manager.MavLinkDroneManager;
+import org.droidplanner.services.android.impl.core.gcs.location.Location;
+import org.droidplanner.services.android.impl.core.helpers.geoTools.GeoTools;
 
 public class FollowLeash extends FollowWithRadiusAlgorithm {
 

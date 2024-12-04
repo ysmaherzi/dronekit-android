@@ -1,5 +1,7 @@
 package org.droidplanner.services.android.impl.core.mission;
 
+import com.o3dr.services.android.lib.coordinate.LatLong;
+
 import org.droidplanner.services.android.impl.core.mission.commands.CameraTriggerImpl;
 import org.droidplanner.services.android.impl.core.mission.commands.ChangeSpeedImpl;
 import org.droidplanner.services.android.impl.core.mission.commands.ConditionYawImpl;
@@ -18,7 +20,6 @@ import org.droidplanner.services.android.impl.core.mission.waypoints.RegionOfInt
 import org.droidplanner.services.android.impl.core.mission.waypoints.SplineWaypointImpl;
 import org.droidplanner.services.android.impl.core.mission.waypoints.StructureScannerImpl;
 import org.droidplanner.services.android.impl.core.mission.waypoints.WaypointImpl;
-import com.o3dr.services.android.lib.coordinate.LatLong;
 
 import java.util.Collections;
 

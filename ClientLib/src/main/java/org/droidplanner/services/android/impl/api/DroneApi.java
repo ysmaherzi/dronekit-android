@@ -1,5 +1,9 @@
 package org.droidplanner.services.android.impl.api;
 
+import static com.o3dr.services.android.lib.drone.mission.action.MissionActions.ACTION_SET_MISSION;
+import static com.o3dr.services.android.lib.drone.mission.action.MissionActions.EXTRA_MISSION;
+import static com.o3dr.services.android.lib.drone.mission.action.MissionActions.EXTRA_PUSH_TO_DRONE;
+
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -14,7 +18,7 @@ import android.view.Surface;
 
 import com.MAVLink.Messages.MAVLinkMessage;
 import com.MAVLink.ardupilotmega.msg_mag_cal_progress;
-import com.MAVLink.ardupilotmega.msg_mag_cal_report;
+import com.MAVLink.common.msg_mag_cal_report;
 import com.o3dr.services.android.lib.coordinate.LatLongAlt;
 import com.o3dr.services.android.lib.drone.action.CameraActions;
 import com.o3dr.services.android.lib.drone.action.ConnectionActions;
@@ -64,10 +68,6 @@ import java.util.NoSuchElementException;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 import timber.log.Timber;
-
-import static com.o3dr.services.android.lib.drone.mission.action.MissionActions.ACTION_SET_MISSION;
-import static com.o3dr.services.android.lib.drone.mission.action.MissionActions.EXTRA_MISSION;
-import static com.o3dr.services.android.lib.drone.mission.action.MissionActions.EXTRA_PUSH_TO_DRONE;
 
 /**
  * Implementation for the IDroneApi interface.

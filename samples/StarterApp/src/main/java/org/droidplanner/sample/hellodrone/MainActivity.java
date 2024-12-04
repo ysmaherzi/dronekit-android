@@ -5,12 +5,11 @@ import android.graphics.SurfaceTexture;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -53,6 +52,9 @@ import java.util.List;
 
 import static com.o3dr.android.client.apis.ExperimentalApi.getApi;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity implements DroneListener, TowerListener, LinkListener {
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -83,6 +85,7 @@ public class MainActivity extends AppCompatActivity implements DroneListener, To
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.activity_main);
 
         final Context context = getApplicationContext();

@@ -1,7 +1,8 @@
 package org.droidplanner.services.android.impl.core.helpers.geoTools;
 
-import org.droidplanner.services.android.impl.core.helpers.coordinates.CoordBounds;
 import com.o3dr.services.android.lib.coordinate.LatLong;
+
+import org.droidplanner.services.android.impl.core.helpers.coordinates.CoordBounds;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +53,7 @@ public class LineTools {
 
 	/**
 	 * Finds the line that has the start or tip closest to a point.
-	 * 
+	 *
 	 * @param point
 	 *            Point to the distance will be minimized
 	 * @param list

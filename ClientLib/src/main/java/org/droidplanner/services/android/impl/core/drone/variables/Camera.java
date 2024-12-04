@@ -2,17 +2,17 @@ package org.droidplanner.services.android.impl.core.drone.variables;
 
 import com.MAVLink.ardupilotmega.msg_camera_feedback;
 import com.MAVLink.ardupilotmega.msg_mount_status;
+import com.o3dr.services.android.lib.coordinate.LatLong;
+import com.o3dr.services.android.lib.drone.attribute.AttributeType;
+import com.o3dr.services.android.lib.drone.property.Altitude;
+import com.o3dr.services.android.lib.drone.property.Attitude;
+import com.o3dr.services.android.lib.drone.property.Gps;
 
 import org.droidplanner.services.android.impl.core.drone.DroneInterfaces.DroneEventsType;
 import org.droidplanner.services.android.impl.core.drone.DroneVariable;
 import org.droidplanner.services.android.impl.core.drone.autopilot.MavLinkDrone;
 import org.droidplanner.services.android.impl.core.survey.CameraInfo;
 import org.droidplanner.services.android.impl.core.survey.Footprint;
-import com.o3dr.services.android.lib.coordinate.LatLong;
-import com.o3dr.services.android.lib.drone.attribute.AttributeType;
-import com.o3dr.services.android.lib.drone.property.Altitude;
-import com.o3dr.services.android.lib.drone.property.Attitude;
-import com.o3dr.services.android.lib.drone.property.Gps;
 
 import java.util.ArrayList;
 import java.util.List;

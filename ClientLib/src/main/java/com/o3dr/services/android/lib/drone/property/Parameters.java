@@ -1,9 +1,10 @@
 package com.o3dr.services.android.lib.drone.property;
 
 import android.os.Parcel;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
 import android.text.TextUtils;
+
+import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 import java.util.Collection;

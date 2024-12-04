@@ -1,7 +1,16 @@
 package com.o3dr.android.client.apis;
 
+import static com.o3dr.services.android.lib.drone.action.CameraActions.ACTION_START_VIDEO_STREAM;
+import static com.o3dr.services.android.lib.drone.action.CameraActions.ACTION_STOP_VIDEO_STREAM;
+import static com.o3dr.services.android.lib.drone.action.CameraActions.EXTRA_VIDEO_DISPLAY;
+import static com.o3dr.services.android.lib.drone.action.CameraActions.EXTRA_VIDEO_ENABLE_LOCAL_RECORDING;
+import static com.o3dr.services.android.lib.drone.action.CameraActions.EXTRA_VIDEO_LOCAL_RECORDING_FILENAME;
+import static com.o3dr.services.android.lib.drone.action.CameraActions.EXTRA_VIDEO_PROPERTIES;
+import static com.o3dr.services.android.lib.drone.action.CameraActions.EXTRA_VIDEO_PROPS_UDP_PORT;
+import static com.o3dr.services.android.lib.drone.action.CameraActions.EXTRA_VIDEO_TAG;
+
 import android.os.Bundle;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.Surface;
 
 import com.o3dr.android.client.Drone;
@@ -10,15 +19,6 @@ import com.o3dr.services.android.lib.model.AbstractCommandListener;
 import com.o3dr.services.android.lib.model.action.Action;
 
 import java.util.concurrent.ConcurrentHashMap;
-
-import static com.o3dr.services.android.lib.drone.action.CameraActions.ACTION_START_VIDEO_STREAM;
-import static com.o3dr.services.android.lib.drone.action.CameraActions.ACTION_STOP_VIDEO_STREAM;
-import static com.o3dr.services.android.lib.drone.action.CameraActions.EXTRA_VIDEO_DISPLAY;
-import static com.o3dr.services.android.lib.drone.action.CameraActions.EXTRA_VIDEO_ENABLE_LOCAL_RECORDING;
-import static com.o3dr.services.android.lib.drone.action.CameraActions.EXTRA_VIDEO_LOCAL_RECORDING_FILENAME;
-import static com.o3dr.services.android.lib.drone.action.CameraActions.EXTRA_VIDEO_PROPS_UDP_PORT;
-import static com.o3dr.services.android.lib.drone.action.CameraActions.EXTRA_VIDEO_TAG;
-import static com.o3dr.services.android.lib.drone.action.CameraActions.EXTRA_VIDEO_PROPERTIES;
 
 /**
  * Provides support to control generic camera functionality

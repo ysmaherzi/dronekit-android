@@ -6,7 +6,6 @@ import android.os.Parcel;
 import com.o3dr.android.client.R;
 import com.o3dr.services.android.lib.drone.property.VehicleMode;
 
-
 import java.nio.ByteBuffer;
 
 /**

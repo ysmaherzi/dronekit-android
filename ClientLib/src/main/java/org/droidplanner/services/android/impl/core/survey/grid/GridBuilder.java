@@ -1,9 +1,10 @@
 package org.droidplanner.services.android.impl.core.survey.grid;
 
+import com.o3dr.services.android.lib.coordinate.LatLong;
+
 import org.droidplanner.services.android.impl.core.helpers.geoTools.LineLatLong;
 import org.droidplanner.services.android.impl.core.polygon.Polygon;
 import org.droidplanner.services.android.impl.core.survey.SurveyData;
-import com.o3dr.services.android.lib.coordinate.LatLong;
 
 import java.util.List;
 
@@ -32,7 +33,7 @@ public class GridBuilder {
 		this.lineDist = distance;
 		this.wpDistance = distance;
 	}
-	
+
 	public void setAngle(double newAngle){
 		angle = newAngle;
 	}

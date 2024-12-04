@@ -3,9 +3,6 @@ package org.droidplanner.services.android.impl.utils;
 import android.os.RemoteException;
 import android.util.Pair;
 
-import org.droidplanner.services.android.impl.core.drone.autopilot.Drone;
-import org.droidplanner.services.android.impl.core.drone.autopilot.apm.solo.ArduSolo;
-import org.droidplanner.services.android.impl.core.drone.autopilot.apm.solo.SoloComp;
 import com.o3dr.services.android.lib.drone.attribute.error.CommandExecutionError;
 import com.o3dr.services.android.lib.drone.companion.solo.SoloState;
 import com.o3dr.services.android.lib.drone.companion.solo.controller.SoloControllerMode;
@@ -13,6 +10,10 @@ import com.o3dr.services.android.lib.drone.companion.solo.controller.SoloControl
 import com.o3dr.services.android.lib.drone.companion.solo.tlv.SoloButtonSettingSetter;
 import com.o3dr.services.android.lib.drone.companion.solo.tlv.TLVPacket;
 import com.o3dr.services.android.lib.model.ICommandListener;
+
+import org.droidplanner.services.android.impl.core.drone.autopilot.Drone;
+import org.droidplanner.services.android.impl.core.drone.autopilot.apm.solo.ArduSolo;
+import org.droidplanner.services.android.impl.core.drone.autopilot.apm.solo.SoloComp;
 
 import timber.log.Timber;
 
